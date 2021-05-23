@@ -7,28 +7,33 @@
     <title>Cristian Yovanny</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">
+                <img src="https://res.cloudinary.com/cristianyovanny/image/upload/v1621015833/images/logo-header.png" alt="Cristian Yovanny" height="60" class="logo">
+            </label>
+            <ul>
+                <li><a class="active" href="./">Inicio</a></li>
+                <li><a href="./about.html">Acerca de mí</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <header class="header">
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <label class="logo">
-                    <img src="https://res.cloudinary.com/cristianyovanny/image/upload/v1621015833/images/logo-header.png" alt="Cristian Yovanny" height="60" class="logo">
-                </label>
-                <ul>
-                    <li><a class="active" href="#">Inicio</a></li>
-                    <li><a href="#">Acerca de mí</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </nav>
-        </header>
         <section class="hero">
-            <div class="text">
-                <h1>Consultoria en estrategias de medios digitales & Desarrollador para páginas web y aplicaciones web</h1>
+            <div class="title">
+                <a href="#" class="text-logo" id="logotipo">
+                    <div class="animated-text" id="logo">cristian yovanny</div>
+                    <p class="subtitle">Consultor de Medios Digitales y Desarrollador Web</p>
+                </a>
             </div>
         </section>
         <section class="services">
@@ -114,6 +119,6 @@
             <p>© 2021 Developed with ❤️ by Cristian Yovanny</p>
         </div>
     </footer>
-    
+    <script src="./js/animated.js"></script>
 </body>
 </html>
