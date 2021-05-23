@@ -1,3 +1,11 @@
+:root {
+    --rojo: #FF1B1C;
+    --naranja: #FF7F11;
+    --negro: #262626;
+    --blanco: #FFFFFC;
+    --beis: #c0a65e;
+}
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -12,13 +20,13 @@ body {
 }
 
 nav {
-    background: #262626;
+    background: var(--negro);
     height: 80px;
     width: 100%;
 }
 
 .logo {
-    padding: 0 30px;
+    padding: 0 10px;
     margin: 10px;
 }
 
@@ -34,44 +42,144 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--blanco);
     font-size: 17px;
     padding: 7px 13px;
     text-transform: uppercase;
 }
 
 a.active {
-    background: #FF1B1C;
-    color: #FFFFFC;
+    background: var(--rojo);
+    color: var(--blanco);
 }
 
 a:hover {
-    background: #FF7F11;
-    color: #FFFFFC;
+    background: var(--naranja);
+    color: var(--blanco);
     transition: .5s;
 }
 
 .checkbtn {
     font-size: 30px;
-    color: #FFFFFC;
+    color: var(--blanco);
     float: right;
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
+    overflow: hidden;
 }
 
 #check {
     display: none;
 }
 
+.hero {
+    background: url('https://res.cloudinary.com/cristianyovanny/image/upload/v1621718505/images/hero.jpg') no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    width: 100%;
+    text-align: center;
+    margin: auto 0;
+}
+
+.title {
+    color: var(--blanco);
+    max-width: 800px;
+    width: 100%;
+    padding-top:20vh;
+    margin: 0 auto;
+}
+
+.text-logo {
+    font-family: 'Crete Round', serif !important;
+    font-size: 30px;
+    display: block;
+    padding: 10px;
+    border: 5px solid var(--blanco);
+    color: var(--blanco);
+}
+
+.text-logo:hover {
+    background: none;
+}
+
+.text-logo .subtitle {
+    font-family: Helvetica, sans-serif !important;
+    color: var(--beis);
+    background: var(--negro);
+    padding: 12px 20px;
+    transition: .5s ease all;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-logo:hover .subtitle {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.animated-text {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.animated-text > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: .3s ease all;
+}
+
+.animated-text > div.animated {
+    transform: translateY(-130px);
+}
+
+.animated-text > div span {
+    font-size: 100px;
+    font-weight: normal;
+    line-height: 130px;
+}
+
+.animated-text .second-line {
+    position: absolute;
+    top: 130px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1120px) {
+    .title {
+        padding-top: 10vh;
+    }
+}
+
 @media (max-width: 952px) {
     label.logo {
-        font-size: 30px;
-        padding-left: 50px;
+        padding-left: 10px;
     }
     nav ul li a {
         font-size: 16px;
+    }
+    .title {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .animated-text > div span {
+        font-size: 80px;
+        line-height: 105px;
+    }
+    .animated-text .second-line {
+        top: 96px;
+    }
+    .animated-text > div.animated {
+        transform: translateY(-96px);
+    }
+    .text-logo .subtitle {
+        font-size: 28px;
     }
 }
 
@@ -109,5 +217,49 @@ a:hover {
     #check:checked ~ ul {
         left: 0;
     }
-    
+    .text-logo:hover {
+        color: var(--blanco);
+    }
+    .animated-text > div span {
+        display: none;
+    }
+    .animated-text .second-line {
+        top: 82px;
+    }
+    .animated-text > div.animated {
+        transform: translateY(-82px);
+    }
+    .text-logo .subtitle {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .animated-text .second-line {
+        top: 70px;
+    }
+    .animated-text > div.animated {
+        transform: translateY(-70px);
+    }
+    .text-logo .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 460px) {
+    .text-logo .subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .text-logo .subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 290px) {
+    .text-logo .subtitle {
+        font-size: 14px;
+    }
 }
